@@ -33,9 +33,11 @@ public class C03_relativeLocators {
         //relative locator kullanarak hybrid bikes altindaki elemente tiklayalim.
         WebElement hybridBike = driver.findElement(By.xpath("//*[text()='Hybrid Bikes']"));
         WebElement electricBike = driver.findElement(with(By.tagName("a")).below(hybridBike));
+        electricBike.click();
+        driver.navigate().back();
         WebElement compliteBike = driver.findElement(with(By.tagName("a")).below(electricBike));
         compliteBike.click();
-        electricBike.click();
+
 
 
 
